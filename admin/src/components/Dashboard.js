@@ -24,7 +24,7 @@ const Dashboard = () => {
         <LogoutButton />
       </div>
       <div className="flex justify-center text-lg">
-        {user ? <p>Welcome, {user}</p> : <p>Welcome to Admin Panel</p>}
+        {user ? <p>Welcome,{user}</p> : <p>Welcome to Admin Panel</p>}
       </div>
     </div>
   );
