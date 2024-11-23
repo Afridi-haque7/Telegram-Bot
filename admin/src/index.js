@@ -6,14 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
-// const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
-// if (!PUBLISHABLE_KEY) {
-//   throw new Error("Missing Publishable Key");
-// }
-
-
-const client_id = "726133460823-6ti5u3cjo1ltgv6g85eptr973em6bcv9.apps.googleusercontent.com";
+const client_id = process.env.REACT_APP_CLIENT_ID;
 
 
   const root = ReactDOM.createRoot(document.getElementById('root'));
