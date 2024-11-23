@@ -15,10 +15,8 @@ const client_id = process.env.REACT_APP_CLIENT_ID;
     <React.StrictMode>
       <BrowserRouter>
         <GoogleOAuthProvider clientId={client_id}>
-          {/* <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/"> */}
           <App />
         </GoogleOAuthProvider>
-        {/* </ClerkProvider> */}
       </BrowserRouter>
     </React.StrictMode>
   );

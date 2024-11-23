@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import LogoutButton from "./Logout";
+import Managebots from "./Managebots";
+import ManageUsers from "./ManageUsers";
+
+
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
@@ -24,7 +28,17 @@ const Dashboard = () => {
         <LogoutButton />
       </div>
       <div className="flex justify-center text-lg">
-        {user ? <p>Welcome,{user}</p> : <p>Welcome to Admin Panel</p>}
+        {user ? <p>Welcome, {user}</p> : <p>Welcome to Admin Panel</p>}
+      </div>
+      <div className="flex justify-between">
+        <div className="width-50%">
+          <p>Update Bot Settings</p>
+          <Managebots />
+        </div>
+        <div className="width-50%">
+          <p>Manage Subscribers</p>
+          <ManageUsers />
+        </div>
       </div>
     </div>
   );

@@ -21,6 +21,24 @@ const message = "Welcome to Weather bot \nHere are the list of commands: \nTo su
 
 let subscribers = new Set();
 var lat, lon;
+
+/*
+const getTelegramBotToken = async () => {
+  try {
+    const response = await axios.get(`${server_url}/bot`);
+    return response.data[0].token; // Assuming 'response.data' contains the token.
+  } catch (error) {
+    console.error("Error fetching Telegram bot token:", error);
+    return null;
+  }
+};
+
+getTelegramBotToken().then((token) => {
+  console.log("token from index: ", token);
+  
+});
+
+*/
 const getSubscriber = async () => {
   try{
     const response = await axios.get(`${server_url}/users`);
