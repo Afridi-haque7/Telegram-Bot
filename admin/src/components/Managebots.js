@@ -13,7 +13,9 @@ const authenticateToken = async (token) => {
 };
 
 const updateToken = async (token) => {
-  const res = await axios.put(`http://localhost:5000/bot/${token}`);
+  const res = await axios.put(
+    `https://telegram-bot-1-t1k9.onrender.com/bot/${token}`
+  );
   console.log(res);
 };
 const Managebots = () => {

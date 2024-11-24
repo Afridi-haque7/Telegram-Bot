@@ -6,7 +6,7 @@ const ManageUsers = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/users")
+      .get("https://telegram-bot-1-t1k9.onrender.com/users")
       .then((res) => {
         console.log(res.data);
         setUsers(res.data);
@@ -17,9 +17,12 @@ const ManageUsers = () => {
   }, []);
 
   const changeStatus = async (chatId, status) => {
-    const res = await axios.put(`http://localhost:5000/users/${chatId}`, {
-      status: status,
-    });
+    const res = await axios.put(
+      `https://telegram-bot-1-t1k9.onrender.com/users/${chatId}`,
+      {
+        status: status,
+      }
+    );
     console.log(res);
     const currentStatus = status ? "Active" : "Blocked";
     window.alert(`User ${currentStatus}`);
@@ -35,7 +38,9 @@ const ManageUsers = () => {
   };
 
   const deleteUser = async (chatId) => {
-    const res = await axios.delete(`http://localhost:5000/users/${chatId}`);
+    const res = await axios.delete(
+      `https://telegram-bot-1-t1k9.onrender.com/users/${chatId}`
+    );
     console.log(res);
     window.alert("User deleted successfully");
     setUsers((prevUsers) => prevUsers.filter((user) => user.chatId !== chatId));

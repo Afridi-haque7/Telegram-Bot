@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 const OPENWEATHERMAP_API_KEY = process.env.OPENWEATHERMAP_API_KEY;
 const api_url = "https://api.openweathermap.org/data/2.5/weather?";
-const server_url = "http://localhost:5000";
+const server_url = "https://telegram-bot-1-t1k9.onrender.com";
 
 
 const getBotToken = async () => {
