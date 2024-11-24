@@ -6,9 +6,9 @@ import TelegramBot from "node-telegram-bot-api";
 
 const app = express();
 app.use(cors());
-const PORT = process.env.PORT || 3000;
+const PORT = 8080;
 
-const OPENWEATHERMAP_API_KEY = process.env.OPENWEATHERMAP_API_KEY;
+const OPENWEATHERMAP_API_KEY = "8fb2da3a64bbf5fd8eafc42dcd79ad4b";
 const api_url = "https://api.openweathermap.org/data/2.5/weather?";
 const server_url = "https://telegram-bot-1-t1k9.onrender.com";
 
