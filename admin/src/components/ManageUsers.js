@@ -21,7 +21,8 @@ const ManageUsers = () => {
       status: status,
     });
     console.log(res);
-    window.alert(`User ${status}`);
+    const currentStatus = status ? "Active" : "Blocked";
+    window.alert(`User ${currentStatus}`);
 
     setUsers((prevUsers) =>
       prevUsers.map((user) => {
@@ -71,7 +72,7 @@ const ManageUsers = () => {
         ))
       ) : (
         <div>
-          <p>No user detected</p>
+          <p className="text-xl font-semibold">No user detected</p>
         </div>
       )}
     </div>

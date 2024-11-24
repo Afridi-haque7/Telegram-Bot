@@ -47,9 +47,7 @@ const registerUser = async(req, res) => {
 
 const deleteUser = async (req,res) => {
     try {
-      const { chatId } = req.params; // Extract the chatId from the request parameters
-
-      // Find and delete the user by chatId
+      const { chatId } = req.params; 
       const deletedUser = await User.findOneAndDelete({ chatId: chatId });
 
       if (!deletedUser) {
