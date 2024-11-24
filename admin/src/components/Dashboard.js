@@ -32,7 +32,6 @@ const Dashboard = () => {
       </div>
       <div className="flex justify-between">
         <div className="width-50%">
-          <p>Update Bot Settings</p>
           <Managebots />
         </div>
         <div className="width-50%">
