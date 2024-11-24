@@ -1,10 +1,9 @@
 import express from 'express';
-import axios from 'axios';
 import cors from 'cors';
 import 'dotenv/config';
 import connectDB from './db/connect.js';
-import router from './route/user.route.js'
-
+import userRouter from "./route/user.route.js";
+import botRouter from "./bot/bot.route.js"
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -17,7 +16,9 @@ app.use(express.json()); // Parse JSON body
 connectDB();
 
 // API routes
-app.use('/', router);
+app.use("/", userRouter);
+app.use("/bot", botRouter);
+
 
 // Start the server
 app.listen(PORT, () => {

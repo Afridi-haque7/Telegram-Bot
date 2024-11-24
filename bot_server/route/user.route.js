@@ -7,12 +7,12 @@ import {
 
 
 
-const router = express.Router();
+const userRouter = express.Router();
 
 
 // Use controllers directly as route handlers
-router.get("/users", getAllUsers);
-router.post("/users", registerUser);
-router.delete("/users/:chatId", deleteUser);
+userRouter.get("/users", getAllUsers);
+userRouter.post("/users", registerUser);
+userRouter.delete("/users/:chatId", deleteUser);
 
-export default router;
+export default userRouter;

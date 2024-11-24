@@ -1,10 +1,10 @@
-import { getToken, updateToken } from "./bot.controller";
+import { getToken, updateToken } from "./bot.controller.js";
 import express from "express";
 
 
-const router = express.Router();
+const botRouter = express.Router();
 
-router.get('/bot', getToken);
-router.put('/bot/:token', updateToken);
+botRouter.get("/", getToken);
+botRouter.put("/:token", updateToken);
 
-export default router;
+export default botRouter;
