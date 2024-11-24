@@ -3,6 +3,7 @@ import {
   getAllUsers,
   registerUser,
   deleteUser,
+  updateUser,
 } from "../controller/user.controller.js";
 
 
@@ -14,5 +15,7 @@ const userRouter = express.Router();
 userRouter.get("/users", getAllUsers);
 userRouter.post("/users", registerUser);
 userRouter.delete("/users/:chatId", deleteUser);
+userRouter.put("/users/:chatId", updateUser);
+
 
 export default userRouter;

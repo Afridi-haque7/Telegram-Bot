@@ -35,7 +35,6 @@ const Dashboard = () => {
           <Managebots />
         </div>
         <div className="width-50%">
-          <p>Manage Subscribers</p>
           <ManageUsers />
         </div>
       </div>

@@ -44,12 +44,12 @@ const Managebots = () => {
     }
   };
   return (
-    <div className="width-screen p-10">
+    <div className="p-10">
       <p className="font-semibold text-lg mb-5">Manage the Bot</p>
       <div>
         <form
           onSubmit={handleSubmit}
-          className="border border-amber-200 width-100% p-10 flex justify-between shadow-xl shadow-amber-200"
+          className="border border-amber-200 width-50% p-10 flex justify-between shadow-xl shadow-amber-200"
         >
           <input
             type="text"

@@ -67,4 +67,25 @@ const deleteUser = async (req,res) => {
 
 };
 
-export { getAllUsers, registerUser, deleteUser };
+const updateUser = async(req, res) => {
+  const {chatId} = req.params;
+  const {status} = req.body;
+
+  try {
+    const updatedUser = await User.findOneAndUpdate(
+      {chatId}, 
+      {status},
+      {new:true}
+    );
+    if (!updatedUser) {
+      return res.status(404).send({ message: "User not updated" });
+    }
+
+    res.status(200).send(updatedUser);
+  } catch (error) {
+    console.error("Error updating user status:", error);
+    res.status(500).send({ message: "Failed to update user status" });
+  }
+};
+
+export { getAllUsers, registerUser, deleteUser, updateUser };
