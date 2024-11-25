@@ -31,10 +31,10 @@ const Dashboard = () => {
         {user ? <p>Welcome, {user}</p> : <p>Welcome to Admin Panel</p>}
       </div>
       <div className="flex justify-between">
-        <div className="width-50%">
+        <div className="">
           <Managebots />
         </div>
-        <div className="width-50%">
+        <div className="">
           <ManageUsers />
         </div>
       </div>
